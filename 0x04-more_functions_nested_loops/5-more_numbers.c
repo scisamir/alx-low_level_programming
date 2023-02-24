@@ -6,7 +6,7 @@
  * Return: Nothing
  */
 
-void print_numbers(void)
+void more_numbers(void)
 {
 	int i, j;
 
@@ -19,6 +19,6 @@ void print_numbers(void)
 			_putchar((j / 10) + '0');
 		}
 	}
-	
+
 	_putchar('\n');
 }
