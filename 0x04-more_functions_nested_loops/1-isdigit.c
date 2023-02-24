@@ -7,7 +7,7 @@
  * Return: 1 if c is a digit otherwise 0
  */
 
-int _isupper(int c)
+int _isdigit(int c)
 {
 	int i;
 
