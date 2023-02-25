@@ -14,6 +14,6 @@ int print_last_digit(int n)
 	if (last_num < 0)
 		last_num *= -1;
 
-	printf("%d%d", last_num, last_num);
-	return (0);
+	_putchar(last_num);
+	return (last_num);
 }
