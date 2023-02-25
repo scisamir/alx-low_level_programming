@@ -8,18 +8,18 @@
 
 int main(void)
 {
-	long int a = 1, b = 2, c, i;
+	unsigned long int a = 1, b = 2, c, i;
 
-	printf("%ld, %ld, ", a, b);
+	printf("%lu, %lu, ", a, b);
 
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 96; i++)
 	{
 		c = a + b;
 
 		if (i == 47)
-			printf("%ld", c);
+			printf("%lu", c);
 		else
-			printf("%ld, ", c);
+			printf("%lu, ", c);
 
 		a = b;
 		b = c;
