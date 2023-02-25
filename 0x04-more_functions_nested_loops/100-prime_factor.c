@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int i, j, test, n = 612852475143;
+	long int i, j, test, n = 612852475143;
 
 	for (i = 2; i <= n; i++)
 	{
