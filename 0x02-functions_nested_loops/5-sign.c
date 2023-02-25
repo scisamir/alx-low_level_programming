@@ -11,15 +11,15 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-		printf("+");
-		return(1);
+		char pos = "+1";
+		return(pos);
 	} else if (n == 0)
 	{
-		printf("0");
-		return(0);
+		char zero = "00";
+		return(zero);
 	} else
 	{
-		printf("-");
-		return(-1);
+		char neg = "-1";
+		return(neg);
 	}
 }

@@ -14,17 +14,14 @@ void jack_bauer(void)
 	for (i = 0; i <= 2; i++)
 	{
 		first_hr_num = i;
-
 		if (i == 2)
 		{
 			for (j = 0; j <= 3; j++)
 			{
 				second_hr_num = j;
-
 				for (l = 0; l <= 5; l++)
 				{
 					first_min_num = l;
-
 					for (m = 0; m <= 9; m++)
 					{
 						second_min_num = m;
@@ -38,11 +35,9 @@ void jack_bauer(void)
 			for (k = 0; k <= 9; k++)
 			{
 				second_hr_num = k;
-
 				for (n = 0; n <= 5; n++)
 				{
 					first_min_num = n;
-
 					for (p = 0; p <= 9; p++)
 					{
 						second_min_num = p;
@@ -50,7 +45,7 @@ void jack_bauer(void)
 						printf("%d%d\n", first_min_num, second_min_num);
 					}
 				}
-			}     
+			}
 		}
 	}
 }

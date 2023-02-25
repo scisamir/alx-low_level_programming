@@ -17,8 +17,10 @@ void times_table(void)
 			times_val = i * j;
 			if (j == 9)
 				printf("%d", times_val);
+			else if (j < 9 && times_val < 10)
+				printf("%d,  ", times_val);
 			else
-				printf("%d, ", times_val);
+				printf("%d" , times_val);
 		}
 		printf("\n");
 	}
