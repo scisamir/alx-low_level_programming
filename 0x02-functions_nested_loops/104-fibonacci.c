@@ -3,10 +3,10 @@
 /**
  * main - prints the first 98 Fibonacci numbers, starting with 1 and 2
  *
- * Return: Nothing
+ * Return: Always 0 (Success)
  */
 
-void main(void)
+int main(void)
 {
 	int a = 1, b = 2, c, i;
 
@@ -25,4 +25,6 @@ void main(void)
 		b = c;
 	}
 	printf("\n");
+
+	return (0);
 }

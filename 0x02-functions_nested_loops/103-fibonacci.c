@@ -4,10 +4,10 @@
  * main - prints the sum of the even-valued terms of a Fibonacci sequence
  * whose values do not exceed 4,000,000
  *
- * Return: Nothing
+ * Return: Always 0 (Success)
  */
 
-void main(void)
+int main(void)
 {
 	int a = 1, b = 2, c, i, sum = 3;
 
@@ -21,4 +21,6 @@ void main(void)
 		b = c;
 	}
 	printf("%d\n", sum);
+
+	return (0);
 }
