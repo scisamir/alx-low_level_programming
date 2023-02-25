@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	long int a = 1, b = 2, c, i, sum = 3;
+	long int a = 1, b = 2, c, sum = 3;
 
 	while (c <= 4000000)
 	{
