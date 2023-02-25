@@ -4,10 +4,10 @@
  * main - finds and prints the largest prime factor of the
  * number 612852475143
  *
- * Return: Nothing
+ * Return: the value of main; see main description
  */
 
-void main(void)
+int main(void)
 {
 	int i, j, test, n = 612852475143;
 
@@ -23,5 +23,5 @@ void main(void)
 			test = i;
 	}
 
-	printf("%d", test);
+	return (test);
 }
