@@ -21,8 +21,10 @@ void print_times_table(int n)
 			times_val = i * j;
 			if (j == n)
 				printf("%d", times_val);
-			else
+			else if (j < n && times_val + i >= 100)
 				printf("%d, ", times_val);
+			else
+				printf("%d,  ", times_val);
 		}
 		printf("\n");
 	}
