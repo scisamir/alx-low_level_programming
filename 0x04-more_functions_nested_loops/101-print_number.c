@@ -9,7 +9,7 @@
 
 void print_number(int n)
 {
-	int test = n;
+	int test = n, i = 1000000000, j;
 
 	if (test < 0)
 	{
@@ -17,18 +17,19 @@ void print_number(int n)
 		_putchar(45);
 	}
 
-	if (test >= 1000)
-		_putchar((test / 1000) + '0');
-	if (test >= 100)
+	while (i > test)
 	{
-		test = test % 1000;
-		_putchar((test / 100) + '0');
+		i /= 10;
+		j = i;
 	}
-	if (test >= 10)
+
+	while (test >= j)
 	{
-		test = test % 100;
-		_putchar((test / 10) + '0');
+		_putchar((test / j) + '0');
+		test = test % j;
+		j /= 10;
 	}
+
 	test = test % 10;
 	_putchar(test + '0');
 }
