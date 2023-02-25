@@ -17,14 +17,14 @@ void print_number(int n)
 		_putchar(45);
 	}
 
-	if (test > 1000)
+	if (test >= 1000)
 		_putchar((test / 1000) + '0');
-	if (test > 100)
+	if (test >= 100)
 	{
 		test = test % 1000;
 		_putchar((test / 100) + '0');
 	}
-	if (test > 10)
+	if (test >= 10)
 	{
 		test = test % 100;
 		_putchar((test / 10) + '0');
