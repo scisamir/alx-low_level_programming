@@ -21,6 +21,7 @@ void print_number(int n)
 	{
 		i /= 10;
 		j = i;
+		k++
 	}
 
 	for (l = 0; l < k; l++)
