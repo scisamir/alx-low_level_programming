@@ -9,7 +9,7 @@
 
 void print_number(int n)
 {
-	int test = n, i = 1000000000, j;
+	int test = n, i = 1000000000, j, k = 0, l;
 
 	if (test < 0)
 	{
@@ -23,7 +23,7 @@ void print_number(int n)
 		j = i;
 	}
 
-	while (test >= j)
+	for (l = 0; l < k; l++)
 	{
 		_putchar((test / j) + '0');
 		test = test % j;
