@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	long int i, j, test, n = 612852475143;
+	long long int i, j, test, n = 612852475143;
 
 	for (i = 2; i <= n; i++)
 	{
@@ -22,7 +22,7 @@ int main(void)
 		if (i % n == 0)
 			test = i;
 	}
-	printf("%ld", test);
+	printf("%lld", test);
 
 	return (0);
 }
