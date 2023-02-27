@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_array - prints n elements of an array of integers, followed by a new line
+ * print_array - prints n elements of an array of integers,
+ * followed by a new line
  * @a: the array
  * @n: the number of items to be printed
  *
@@ -12,6 +13,9 @@
 void print_array(int *a, int n)
 {
 	int i = 0;
+
+	if (n <= 0)
+		printf("\n\n");
 
 	while (i < n)
 	{
