@@ -2,20 +2,21 @@
 
 /**
  * rev_string - reverses a string
+ * @s: string to be reversed
  *
  * Return: Nothing
  */
 
 void rev_string(char *s)
 {
-	int i = 0;
+	int i = 0, j;
 
 	while (*(s + i) != '\0')
 	{
 		i++;
 	}
 
-	int j = i - 1;
+	j = i - 1;
 
 	while (j >= 0)
 	{
