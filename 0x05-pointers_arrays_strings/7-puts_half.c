@@ -15,6 +15,8 @@ void puts_half(char *str)
 		i++;
 	}
 
+	i++;
+
 	if (i % 2 != 0)
 		half_len = (i - 1) / 2;
 	else
