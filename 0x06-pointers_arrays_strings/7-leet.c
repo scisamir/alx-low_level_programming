@@ -18,9 +18,7 @@ char *leet(char *str)
                 for (j = 0; j < 5; j++)
                 {
                         if (str[i] == lets[j] || str[i] == (lets[j] - 32))
-                        {
                                 str[i] = nums[j];
-                        }
                 }
                 i++;
         }
