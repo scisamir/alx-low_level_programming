@@ -31,7 +31,7 @@ char *_strncat(char *dest, char *src, int n)
         {
                 if (k > dest_len)
                         dest[k] = src[k - src_len + 1];
-                        
+
                         if (k == new_len + 1)
                                 dest[k] = '\0';
                 else
