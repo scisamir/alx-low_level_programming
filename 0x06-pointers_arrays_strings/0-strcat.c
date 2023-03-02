@@ -24,13 +24,13 @@ char *_strcat(char *dest, char *src)
                 j++;
 
         dest_len = i - 1;
-        src_len = j - 1;
+        src_len = j;
         new_len = dest_len + src_len;
 
         while (k <= new_len)
         {
                 if (k > dest_len)
-                        dest[k] = src[k - src_len];
+                        dest[k] = src[k - src_len + 1];
                 else
                         dest[k] = new_arr[k];
 
