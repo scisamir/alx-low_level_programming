@@ -24,14 +24,17 @@ char *_strncat(char *dest, char *src, int n)
         while (src[j] != '\0')
                 j++;
 
+        if (n > j)
+                n = j;
+
         dest_len = i - 1;
-        src_len = j - 1;
+        src_len = j;
         new_len = dest_len + n;
 
         while (k <= new_len)
         {
                 if (k > dest_len)
-                        dest[k] = src[k - src_len];
+                        dest[k] = src[k - src_len + 1];
                 else
                         dest[k] = new_arr[k];
 
