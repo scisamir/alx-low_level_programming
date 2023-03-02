@@ -27,10 +27,13 @@ char *_strncat(char *dest, char *src, int n)
         src_len = j;
         new_len = dest_len + n;
 
-        while (k <= new_len)
+        while (k <= new_len + 1)
         {
                 if (k > dest_len)
                         dest[k] = src[k - src_len + 1];
+                        
+                        if (k == new_len + 1)
+                                dest[k] = '\0';
                 else
                         dest[k] = dest[k];
 
