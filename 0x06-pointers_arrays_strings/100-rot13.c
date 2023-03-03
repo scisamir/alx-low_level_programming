@@ -18,7 +18,10 @@ char *rot13(char *str)
 		for (j = 0; j < 52; j++)
 		{
 			if (str[i] == nm[j])
+			{
 				str[i] = rt[j];
+				break;
+			}
 		}
 	}
 
