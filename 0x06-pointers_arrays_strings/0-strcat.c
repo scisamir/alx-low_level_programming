@@ -19,14 +19,14 @@ char *_strcat(char *dest, char *src)
 	while (src[j] != '\0')
 		j++;
 
-	dest_len = i - 1;
+	dest_len = i;
 	src_len = j;
-	new_len = dest_len + src_len;
+	new_len = dest_len + src_len - 1;
 
 	while (k <= new_len)
 	{
-		if (k > dest_len)
-			dest[k] = src[k - src_len + 1];
+		if (k >= dest_len)
+			dest[k] = src[k - dest_len];
 		else
 			dest[k] = dest[k];
 
