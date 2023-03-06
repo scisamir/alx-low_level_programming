@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 	for (i = 0; i < doub_size; i += size + 1)
 		sum_diag1 += a[i];
 
-	for (j = doub_size - size; j >= 0; j -= size - 1)
+	for (j = size - 1; j < doub_size - 1; j += size - 1)
 		sum_diag2 += a[j];
 
 	printf("%d, %d\n", sum_diag1, sum_diag2);
