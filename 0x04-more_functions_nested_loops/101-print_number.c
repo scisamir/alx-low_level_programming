@@ -21,9 +21,12 @@ void print_number(int n)
 		_putchar(45);
 	}
 
-	for (; i >= 1; i /= 10)
+	if (test != 0)
 	{
-		if (test / i != 0)
-			_putchar((test / i) % 10 + '0');
+		for (; i >= 1; i /= 10)
+		{
+			if (test / i != 0)
+				_putchar((test / i) % 10 + '0');
+		}
 	}
 }
