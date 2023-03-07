@@ -19,9 +19,9 @@ void print_number(int n)
 	{
 		test *= -1;
 		_putchar(45);
-	}
+	
 
-	if (test != 0)
+	if (test > 0 || test < 0)
 	{
 		for (; i >= 1; i /= 10)
 		{
