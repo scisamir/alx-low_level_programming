@@ -9,7 +9,11 @@
 
 void print_number(int n)
 {
-	int test = n, i = 1000000000, j, k = 9, l;
+	int test = n;
+	int i = 1000000000;
+
+	if (test == 0)
+		_putchar('0');
 
 	if (test < 0)
 	{
@@ -17,23 +21,10 @@ void print_number(int n)
 		_putchar(45);
 	}
 
-	if (test != 0)
+
+	for (; i >= 1; i /= 10)
 	{
-		while (i > test)
-		{
-			i /= 10;
-			j = i;
-			k--;
-		}
-
-		for (l = 0; l < k; l++)
-		{
-			_putchar((test / j) + '0');
-			test = test % j;
-			j /= 10;
-		}
+		if (test / i != 0)
+			_putchar((test / i) % 10 + '0');
 	}
-
-	test = test % 10;
-	_putchar(test + '0');
 }
