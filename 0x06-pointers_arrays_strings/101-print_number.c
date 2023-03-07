@@ -17,18 +17,21 @@ void print_number(int n)
 		_putchar(45);
 	}
 
-	while (i > test)
+	if (test != 0)
 	{
-		i /= 10;
-		j = i;
-		k--;
-	}
+		while (i > test)
+		{
+			i /= 10;
+			j = i;
+			k--;
+		}
 
-	for (l = 0; l < k; l++)
-	{
-		_putchar((test / j) + '0');
-		test = test % j;
-		j /= 10;
+		for (l = 0; l < k; l++)
+		{
+			_putchar((test / j) + '0');
+			test = test % j;
+			j /= 10;
+		}
 	}
 
 	test = test % 10;
