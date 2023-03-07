@@ -20,16 +20,11 @@ void print_number(int n)
 		test *= -1;
 		_putchar(45);
 	}
-	
 
-	if ((test > 0) || (test < 0))
+
+	for (; i >= 1; i /= 10)
 	{
-		for (; i >= 1; i /= 10)
-		{
-			if (test / i != 0)
-			{
-				_putchar((test / i) % 10 + '0');
-			}
-		}
+		if (test / i != 0)
+			_putchar((test / i) % 10 + '0');
 	}
 }
