@@ -11,13 +11,25 @@
 
 int main(int argc, char *argv[])
 {
-	int i = 1, sum = 0;
+	int i = 1, sum = 0, no_num_check = 1;
 
-	if (argc == 1)
+	while (i < argc)
+	{
+		if (!(atoi(argv[i])))
+		{
+			no_num_check++;
+		}
+
+		i++;
+	}
+
+	if (argc == 1 || no_num_check == argc)
 	{
 		printf("0\n");
 		exit(EXIT_SUCCESS);
 	}
+
+	i = 1;
 
 	while (i < argc)
 	{
