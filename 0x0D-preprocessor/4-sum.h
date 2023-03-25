@@ -1,5 +1,6 @@
-#ifndef SUM
+#ifndef __HEADER__
+#define __HEADER__
 
 #define SUM(x, y) ((x) + (y))
 
-#endif /* SUM */
+#endif /* __HEADER__ */
