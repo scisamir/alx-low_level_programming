@@ -1,1 +1,0 @@
-ALX C Static Libraries
