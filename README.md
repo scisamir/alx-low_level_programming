@@ -3,7 +3,7 @@
 This repository contains programs created for the ALX Software Engineering Program. Currently sharpening my knowledge and skills of C, Linux, Algorithms and Data Structures. This repository contains programs written for the low-level programming and algorithm track in the ALX Software Engineering Program. In these projects I learned about data structures, algorithms, and other low-level programming concepts while working in the C programming language.
 
 ## Content
-Directory | Files
+Directory | Description
 --------- | -----
 [0x00-hello_world](https://github.com/scisamir/alx-low_level_programming/tree/master/0x00-hello_world) | Basics, preprocessor, compilation process, betty coding style.
 [0x01-variables_if_else_while](https://github.com/scisamir/alx-low_level_programming/tree/master/0x01-variables_if_else_while) | Variables, if, else, while statements, operators, keywords and identifiers.
