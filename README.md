@@ -14,6 +14,8 @@ Directory | Description
 [0x06-pointers_arrays_strings](https://github.com/scisamir/alx-low_level_programming/tree/master/0x06-pointers_arrays_strings) | Pointers, strings, arrays, data structures, memory layout.
 [0x07-pointers_arrays_strings](https://github.com/scisamir/alx-low_level_programming/tree/master/0x07-pointers_arrays_strings) | Pointers, pointer to pointer, strings, arrays, 2D and multi-dimensional arrays.
 [0x08-recursion](https://github.com/scisamir/alx-low_level_programming/tree/master/0x08-recursion) | Recursion, what on earth is recursion?!
+[0x09-static_libraries](https://github.com/scisamir/alx-low_level_programming/tree/master/0x09-static_libraries) | Static libraries, `ar`, `ranlib`, `nm`.
+[0x0A-argc_argv](https://github.com/scisamir/alx-low_level_programming/tree/master/0x0A-argc_argv) | Arguments to main, argc, argv, `__attribute__((unused))`, `(void)`.
 continues...
 
 ### AUTHOR:
