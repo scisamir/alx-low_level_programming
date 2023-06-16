@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include <ctype.h>
 
 /**
 * is_num - checks if input is a number
@@ -27,10 +27,10 @@ int is_num(char *a)
 * @argc: program argument count
 * @argv: program argument array
 *
-* Return: Nothing
+* Return: EXIT_SUCCESS if success otherwise 98
 */
 
-void main(int argc, int *argv[])
+int main(int argc, char *argv[])
 {
 	int res;
 
@@ -40,12 +40,13 @@ void main(int argc, int *argv[])
 		exit(98);
 	}
 
-	if (!(is_num(argv[0]) || !(is_num(argv[1]))))
+	if (!(is_num(argv[1]) || !(is_num(argv[2]))))
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	res = atoi(argv[0]) * atoi(argv[1]);
+	res = (atoi(argv[1])) * atoi((argv[2]));
 	printf("%d\n", res);
+	exit(EXIT_SUCCESS);
 }
