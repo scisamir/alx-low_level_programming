@@ -9,7 +9,8 @@
 * Return: 1 if it's a number, otherwise 0
 */
 
-int is_num(char *a) {
+int is_num(char *a)
+{
 	int i = 0;
 
 	while (a[i++])
@@ -29,7 +30,7 @@ int is_num(char *a) {
 * Return: Nothing
 */
 
-void main (int argc, int *argv[])
+void main(int argc, int *argv[])
 {
 	int res;
 
