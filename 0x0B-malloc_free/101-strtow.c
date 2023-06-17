@@ -86,8 +86,8 @@ char **strtow(char *str)
 				return (NULL);
 			}
 
-			for (j = 0; j < w_len; j++, i++)
-				word_arr[k][j] = str[i];
+			for (j = 0; j < w_len; j++)
+				word_arr[k][j] = str[i++];
 			word_arr[k++][j] = '\0';
 		}
 	}
