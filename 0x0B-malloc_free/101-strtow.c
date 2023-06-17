@@ -63,7 +63,7 @@ char **strtow(char *str)
 	int i, j, k = 0, w_len, word_count;
 	char **word_arr;
 
-	if (str == NULL || *str == '\0' || (*str == ' ' && *(str + 1) == '\0'))
+	if (str == NULL || *str == '\0')
 		return (NULL);
 
 	word_count = word_arr_len(str);
@@ -72,7 +72,7 @@ char **strtow(char *str)
 	if (word_arr == NULL)
 		return (NULL);
 
-	for (i = 0; str[i] != '\0' && k < word_count; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] != ' ')
 		{
