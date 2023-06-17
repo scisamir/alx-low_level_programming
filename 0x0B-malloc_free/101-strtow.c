@@ -61,7 +61,7 @@ int word_arr_len(char *str)
 char **strtow(char *str)
 {
 	int i, j, k = 0, w_len, word_count;
-	char *word, **word_arr;
+	char **word_arr;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
@@ -77,18 +77,18 @@ char **strtow(char *str)
 		if (str[i] != ' ')
 		{
 			word_len(i, &w_len, str);
-			word = malloc(sizeof(char) * (w_len + 1));
-
-			for (j = 0; j <= w_len; j++)
+			word_arr[k] = malloc(sizeof(char) * (w_len + 1));
+			if (word_arr[k] == NULL)
 			{
-				if (j == w_len)
-					word[j] = '\0';
-				else
-					word[j] = str[i++];
+				for (k = k - 1; k >= 0; k++)
+					free(word_arr[k]);
+				free(word_arr);
+				return (NULL);
 			}
 
-			word_arr[k++] = word;
-			free(word);
+			for (j = 0; j < w_len; j++)
+				word_arr[k][j] = str[i++];
+			word_arr[k++][j] = '\0';
 		}
 	}
 
