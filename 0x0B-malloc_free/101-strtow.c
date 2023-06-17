@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
 * word_len - finds the length of the a single word in a sentence
