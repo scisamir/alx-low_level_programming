@@ -63,7 +63,7 @@ char **strtow(char *str)
 	int i, j, k = 0, w_len, word_count;
 	char **word_arr;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == '\0' || (*str == ' ' && *(str + 1) == '\0')
 		return (NULL);
 
 	word_count = word_arr_len(str);
