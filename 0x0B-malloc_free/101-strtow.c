@@ -17,6 +17,9 @@ int word_len(int pos, int *w_len, char *str)
 	{
 		len += 1;
 		pos++;
+
+		if (str[pos] == ' ')
+			break;
 	}
 
 	*w_len = len;
@@ -41,6 +44,8 @@ int word_arr_len(char *str)
 			i = word_len(i, &w_len, str);
 			word_count += 1;
 		}
+		else
+			continue;
 	}
 
 	return (word_count);
