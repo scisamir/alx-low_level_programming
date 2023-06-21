@@ -81,8 +81,8 @@ char **strtow(char *str)
 			word_arr[k] = malloc(sizeof(char) * (w_len + 1));
 			if (word_arr[k] == NULL)
 			{
-				for (k = k - 1; k >= 0; k++)
-					free(word_arr[k]);
+				while (k >= 0)
+					free(word_arr[k--]);
 				free(word_arr);
 				return (NULL);
 			}
