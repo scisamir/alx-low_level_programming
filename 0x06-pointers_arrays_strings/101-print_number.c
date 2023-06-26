@@ -9,22 +9,17 @@
 
 void print_number(int n)
 {
-	int test = n;
-	int i = 1000000000;
-
-	if (test == 0)
-		_putchar('0');
-
-	if (test < 0)
+	if (n < 0)
 	{
-		test *= -1;
-		_putchar(45);
+		_putchar('-');
+		n *= -1;
 	}
-
-
-	for (; i >= 1; i /= 10)
+	if (n == 0)
+		_putchar(0 + '0');
+	if (n > 0)
 	{
-		if (test / i != 0)
-			_putchar((test / i) % 10 + '0');
+		if ((n / 10) > 0)
+			print_number(n / 10);
+		_putchar(n % 10 + '0');
 	}
 }
