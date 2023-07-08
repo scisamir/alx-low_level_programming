@@ -13,14 +13,14 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int res = n ^ m;
-	unsigned long int mask = 536870912; /* 100000000000000000000000000000 */
+	unsigned long int mask = 1;
 	unsigned int count = 0;
 
-	while (mask)
+	while (mask <= res)
 	{
 		if (mask & res)
 			count++;
-		mask >>= 1;
+		mask <<= 1;
 	}
 
 	return (count);
