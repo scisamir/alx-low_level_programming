@@ -12,13 +12,13 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd, wd, len = 0;
 
-	if (filename == NULL)
+	if (!filename)
 		return (-1);
 
-	while (text_content[len])
+	while (text_content && text_content[len])
 		len++;
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 600);
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (fd < 0)
 		return (-1);
 
