@@ -59,7 +59,7 @@ int main(int ac, char *av[])
 	if (file_from_od < 0)
 		handleExit("Error: Can't read from file", file_from, 98);
 
-	file_to_od = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 664);
+	file_to_od = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to_od < 0)
 		handleExit("Error: Can't write to", file_to, 99);
 
