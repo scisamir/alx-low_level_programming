@@ -13,7 +13,7 @@
 
 void handleExit(const char *message, const char *type, int code)
 {
-	dprintf(2, "%s %s\n", message, type);
+	dprintf(STDERR_FILENO, "%s %s\n", message, type);
 	exit(code);
 }
 
@@ -29,7 +29,7 @@ void handleExit(const char *message, const char *type, int code)
 
 void handleCloseErr(const char *message, int type, int code)
 {
-	dprintf(2, "%s %d\n", message, type);
+	dprintf(STDERR_FILENO, "%s %d\n", message, type);
 	exit(code);
 }
 
@@ -65,6 +65,9 @@ int main(int ac, char *av[])
 
 	while ((read_bytes = read(file_from_od, buffer, BUFF_SIZE)) > 0)
 	{
+		if (read_bytes < 0)
+			handleExit("Error: Can't read from file", file_from, 98);
+
 		written_bytes = write(file_to_od, buffer, read_bytes);
 		if (written_bytes < 0)
 			handleExit("Error: Can't write to", file_to, 99);
