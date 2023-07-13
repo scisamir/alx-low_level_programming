@@ -63,14 +63,17 @@ int main(int ac, char *av[])
 	if (file_to_od < 0)
 		handleExit("Error: Can't write to", file_to, 99);
 
-	while ((read_bytes = read(file_from_od, buffer, BUFF_SIZE)) > 0)
-	{
-		if (read_bytes < 0)
-			handleExit("Error: Can't read from file", file_from, 98);
+	read_bytes = read(file_from_od, buffer, BUFF_SIZE);
+	if (read_bytes < 0)
+		handleExit("Error: Can't read from file", file_from, 98);
 
+	while (read_bytes)
+	{
 		written_bytes = write(file_to_od, buffer, read_bytes);
 		if (written_bytes < 0)
 			handleExit("Error: Can't write to", file_to, 99);
+
+		read_bytes = read(file_from_od, buffer, BUFF_SIZE);
 	}
 
 	if (close(file_from_od) < 0)
