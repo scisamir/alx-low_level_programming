@@ -1,4 +1,11 @@
-#include "lists.h"
+#include "lisis.h"
+
+/**
+ * print_dlistint - prints all the elements of a dlistint_t list
+ * @h: a pointer to the doubly linked list
+ *
+ * Return: the number of nodes in the list
+ */
 
 size_t print_dlistint(const dlistint_t *h)
 {
