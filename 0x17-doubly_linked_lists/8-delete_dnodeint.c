@@ -8,20 +8,25 @@
  * Return: Nothing
  */
 
-void delete_at_beginning(dlistint_t *head)
+int delete_at_beginning(dlistint_t **head)
 {
-	dlistint_t *temp, *ptr = head;
+	dlistint_t *ptr = *head;
 
-	temp = ptr;
-
-	if (ptr->next != NULL)
+	if (ptr != NULL)
 	{
-		ptr = ptr->next;
-		ptr->prev = NULL;
+		if ((*head)->next != NULL)
+		{
+			*head = (*head)->next;
+			(*head)->prev = NULL;
+		}
+
+		free(ptr);
+		ptr = NULL;
+
+		return (1);
 	}
 
-	free(temp);
-	temp = NULL;
+	return (-1);
 }
 
 
@@ -44,10 +49,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1);
 
 	if (index == 0)
-	{
-		delete_at_beginning(ptr);
-		return (1);
-	}
+		return(delete_at_beginning(head));
 
 	while (ptr->next != NULL)
 	{
@@ -73,5 +75,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		ptr = NULL;
 		return (1);
 	}
+
 	return (-1);
 }
