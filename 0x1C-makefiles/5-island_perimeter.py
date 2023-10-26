@@ -5,25 +5,26 @@
 
 
 def island_perimeter(grid):
-    """ Returns the perimeter of the island described in grid """
-    height = 0
-    width = 0
-
-    width_pos_list = []
+    """
+        Returns the perimeter of the island described in grid
+    """
+    perimeter = 0
 
     grid_height = len(grid)
     grid_width = len(grid[0]) if grid_height else 0
 
     for i in range(grid_height):
-        height_check = False
-
         for j in range(grid_width):
-            if grid[i][j] == 1 and j not in width_pos_list:
-                width += 1
-                width_pos_list.append(j)
+            if grid[i][j] == 1:
+                perimeter += 4
 
-            if grid[i][j] == 1 and height_check is False:
-                height_check = True
-                height += 1
+                if i > 0 and grid[i - 1][j] == 1:
+                    perimeter -= 1
+                if j < grid_width - 1 and grid[i][j + 1] == 1:
+                    perimeter -= 1
+                if i < grid_height - 1 and grid[i + 1][j] == 1:
+                    perimeter -= 1
+                if j > 0 and grid[i][j - 1] == 1:
+                    perimeter -= 1
 
-    return (2 * (height + width))
+    return perimeter
